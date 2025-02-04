@@ -36,6 +36,19 @@ body {
 .navbar .logo img {
     height: 40px;
     margin-right: 0.5rem;
+    animation: slideleft 2s ease-out;
+}
+
+@keyframes slideleft {
+    0% {
+        transform: translateX(-80px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
 }
 
 .navbar .logo span {
@@ -57,6 +70,10 @@ body {
     text-decoration: none;
     color: #ffffff;
     font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: var(--accent-teal);
 }
 
 .lobster-font {
@@ -124,10 +141,11 @@ body {
 }
 
 @keyframes slidein {
-    0%{
+    0% {
         transform: translateX(250px);
         opacity: 0;
     }
+
     100% {
         transform: translateX(0px);
         opacity: 1;

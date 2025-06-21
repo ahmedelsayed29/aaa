@@ -2,87 +2,173 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn more about AutoNix, our vision, and the team behind it.">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Learn more about AutoNix, our vision, and the team behind it." />
     <title>About Us - AutoNix</title>
-    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Fonts -->
     <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster&display=swap">
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" />
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-...hash..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        .team-member-img {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .team-member-img .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #2c3e50b6;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+            border-radius: 50%;
+            font-size: 1.2rem;
+        }
+
+        .team-member-img:hover .overlay {
+            opacity: 1;
+        }
+
+        .team-member-img .overlay a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: bold;
+        }
+    </style>
 </head>
 
 <body>
     <!-- Navbar -->
     <nav class="navbar">
         <div class="logo">
-            <img src="imgs/Untitled-222.png">
+            <img src="imgs/Untitled-222.png" alt="AutoNix Logo" />
             <span class="lobster-font">AutoNix</span>
         </div>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="AboutUs.html">About Us</a></li>
             <li><a href="index.html#features">Features</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li><a href="index.html#feedback">Contact Us</a></li>
         </ul>
     </nav>
 
-    <!-- About Us Section -->
+    <!-- Team Section -->
     <section class="about-us">
         <h1>Our Team</h1>
         <div class="team">
+
+            <!-- Team Member -->
             <div class="team-member">
                 <div class="team-member-img">
-                    <img src="imgs/youssef.jpg" alt="Youssef Hamed">
+                    <img src="imgs/youssef.jpg" alt="Youssef Hamed" />
+                    <div class="overlay">
+                        <a href="https://www.linkedin.com/in/youssef-hamed-/" target="_blank"><i
+                                class="fab fa-linkedin"></i>LinkedIn</a>
+                    </div>
                 </div>
                 <h2>Youssef Hamed</h2>
-                <p>Embedded Software Engineer (Team Lead)</p>
+                <p>Embedded Software Engineer (Team Leader)</p>
             </div>
+
             <div class="team-member">
                 <div class="team-member-img">
-                    <img src="imgs/elezaly.jpg" alt="Mahmoud Elezaly">
-                </div>
-                <h2>Mahmoud Elezaly</h2>
-                <p>Embedded Software Engineer</p>
-            </div>
-            <div class="team-member">
-                <div class="team-member-img">
-                    <img src="imgs/Elsaaed.jpg" alt="Elsaaed Mohammed">
-                </div>
-                <h2>Elsaeed Mohammed</h2>
-                <p>Embedded Software Engineer</p>
-            </div>
-            <div class="team-member">
-                <div class="team-member-img">
-                    <img src="imgs/hafez.jpg" alt="Mahmoud Hafez">
-                </div>
-                <h2>Mahmoud Hafez</h2>
-                <p>Embedded Software Engineer</p>
-            </div>
-            <div class="team-member">
-                <div class="team-member-img">
-                    <img src="imgs/Ahmed.jpg" alt="Ahmed Elsayed">
+                    <img src="imgs/Ahmed.jpg" alt="Ahmed Elsayed" />
+                    <div class="overlay">
+                        <a href="https://www.linkedin.com/in/ahmedtaha287/" target="_blank"><i
+                                class="fab fa-linkedin"></i>LinkedIn</a>
+                    </div>
                 </div>
                 <h2>Ahmed Elsayed</h2>
                 <p>Hardware Engineer</p>
             </div>
+
             <div class="team-member">
                 <div class="team-member-img">
-                    <img src="imgs/gamal.jpg" alt="Gamal Elshambki">
+                    <img src="imgs/gamal.jpg" alt="Gamal Elshambki" />
+                    <div class="overlay">
+                        <a href="https://www.linkedin.com/in/gamalelshambki?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank"><i
+                                class="fab fa-linkedin"></i>LinkedIn</a>
+                    </div>
                 </div>
                 <h2>Gamal Elshambki</h2>
                 <p>Hardware Engineer</p>
             </div>
+
             <div class="team-member">
                 <div class="team-member-img">
-                    <img src="imgs/sayed.jpg" alt="Sayed Moanis">
+                    <img src="imgs/elezaly.jpg" alt="Mahmoud Elezaly" />
+                    <div class="overlay">
+                        <a href="https://www.linkedin.com/in/mahmoud-elezaly-88a27b286?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i
+                                class="fab fa-linkedin"></i>LinkedIn</a>
+                    </div>
+                </div>
+                <h2>Mahmoud Elezaly</h2>
+                <p>Embedded Software Engineer</p>
+            </div>
+
+            <div class="team-member">
+                <div class="team-member-img">
+                    <img src="imgs/Elsaaed.jpg" alt="Elsaeed Mohammed" />
+                    <div class="overlay">
+                        <a href="https://www.linkedin.com/in/elsaied-mohammed-1aa0b4250?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i
+                                class="fab fa-linkedin"></i>LinkedIn</a>
+                    </div>
+                </div>
+                <h2>Elsaeed Mohammed</h2>
+                <p>Embedded Software Engineer</p>
+            </div>
+
+            <div class="team-member">
+                <div class="team-member-img">
+                    <img src="imgs/hafez.jpg" alt="Mahmoud Hafez" />
+                    <div class="overlay">
+                        <a href="https://www.linkedin.com/in/mahmoud-hafez-a9b5511b5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i
+                                class="fab fa-linkedin"></i>LinkedIn</a>
+                    </div>
+                </div>
+                <h2>Mahmoud Hafez</h2>
+                <p>Embedded Software Engineer</p>
+            </div>
+
+            <div class="team-member">
+                <div class="team-member-img">
+                    <img src="imgs/sayed.jpg" alt="Sayed Moanis" />
+                    <div class="overlay">
+                        <a href="https://www.linkedin.com/in/elsayed-moanis-666629216?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i
+                                class="fab fa-linkedin"></i>LinkedIn</a>
+                    </div>
                 </div>
                 <h2>Sayed Moanis</h2>
                 <p>Embedded Software Engineer</p>
             </div>
+
             <div class="team-member">
                 <div class="team-member-img">
-                    <img src="imgs/Magdy.jpg" alt="Magdy Mahmoud">
+                    <img src="imgs/Magdy.jpg" alt="Magdy Mahmoud" />
+                    <div class="overlay">
+                        <a href="https://www.linkedin.com/in/magdy-mahmoud-a76288264" target="_blank"><i
+                                class="fab fa-linkedin"></i>LinkedIn</a>
+                    </div>
                 </div>
                 <h2>Magdy Mahmoud</h2>
                 <p>Embedded Software Engineer</p>
@@ -90,7 +176,7 @@
         </div>
     </section>
 
-    <!-- About Us Content Section -->
+    <!-- About Details -->
     <section class="about-details">
         <div class="container">
             <h2>Our Vision</h2>
@@ -102,14 +188,15 @@
             <p>AutoNix is driven by a dedicated team of automotive engineers, safety experts, and technology innovators
                 committed to redefining road safety. With a shared passion for innovation, we design cutting-edge
                 solutions that enhance driver awareness, prevent accidents, and create a safer driving future for all.
+            </p>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
         <p>&copy; 2025 AutoNix. All rights reserved.</p>
-        <a href="#contact">Contact Us</a> | <a href="#about">About Us</a> | <a href="#home">Home</a>
+        <a href="index.html#feedback">Contact Us</a> | <a href="aboutUs.html">About Us</a> | <a href="index.html#home">Home</a>
     </footer>
-
+</body>
 
 </html>

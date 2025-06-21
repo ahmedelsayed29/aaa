@@ -4,10 +4,6 @@
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 /* Root Variables */
 :root {
     --primary-color: #2C3E50;
@@ -23,6 +19,10 @@ body {
     background-color: var(--light-gray);
     color: var(--text-dark);
     text-align: center;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 /* Navbar Styles */

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Announcing AutoNix, a new application for safe driving.">
+    <title>AutoNix</title>
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster&display=swap">
+    <style>
+        .features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+        justify-items: center;
+    }
+
+    .feature-img {
+        width: 60%;
+        height: auto;
+        border-radius: 8px;
+    }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="imgs/Untitled-222.png" alt="AutoNix Logo">
+            <span class="lobster-font">AutoNix</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="aboutUs.html">About Us</a></li>
+            <li><a href="index.html#features">Features</a></li>
+            <li><a href="#feedback">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Wi-Fi Control</h1>
+            <p>The Wi-Fi Control Task enables real-time wireless interaction with the vehicle using a UART-based Wi-Fi module (USART3).
+            It continuously listens for character-based commands like 'f' for forward, 'b' for backward, 's' to stop, and 'l'/'r'
+            for steering.
+            Each command is interpreted instantly and translated into motor or servo control actions, ensuring smooth remote
+            operation.
+            Additionally, the task supports OTA (Over-The-Air) firmware updates when the 'u' command is received, triggering a
+            system reset after flashing.
+            Commands are processed with low latency (every 50ms), enabling a highly responsive control experience.
+            The task integrates seamlessly with the motor and steering systems through message queues and hardware drivers.
+            It offers a user-friendly and flexible way to control the vehicle without physical connection.
+            Ideal for testing, remote driving, or IoT integration, this task enhances mobility and control versatility.</p>
+        </div>
+        <div class="hero-image">
+            <img src="imgs/autonix-logo.png" alt="Calming brain signals illustration">
+        </div>
+    </section>
+
+    <!-- Flowchart Section -->
+    <section class="features-container" id="features">
+        <div class="features-header">
+            <h2 class="features-heading">Flowchart</h2>
+        </div>
+        <div class="features center-content">
+            <div class="feature">
+                <img src="imgs/wifi.jpg" class="feature-image" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- Hardware Component Section -->
+    <section class="features-container" id="features">
+        <div class="features-header">
+            <h2 class="features-heading">Hardware Component</h2>
+        </div>
+        <div class="features">
+            <div class="feature">
+                <h2>STM</h2>
+                <img src="imgs/stm.jpg" class="feature-img" alt="">
+            </div>
+            <div class="feature">
+                <h2>ESP-32</h2>
+                <img src="imgs/esp32.jpg" class="feature-img" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Video Section -->
+    <section class="features-container" id="features">
+        <div class="features-header">
+            <h2 class="features-heading">Demo Video</h2>
+        </div>
+        <div class="features center-content">
+            <div class="feature">
+                <video controls src="vid/try app .mp4" class="feature-image"></video>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feedback Section -->
+    <section class="feedback" id="feedback">
+        <h2>Be the First to Know About AutoNix!</h2>
+        <p>We Value your Insights! Share your Feedback to Help us Enhance Our services and Deliver an Exceptional
+            Experience.</p>
+        <form action="#" method="POST" class="feedback-form">
+            <input type="text" placeholder="Enter your Feedback" required>
+            <button type="submit" class="cta-primary">Send</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 AutoNix. All rights reserved.</p>
+        <a href="index.html#feedback">Contact Us</a> | <a href="aboutUs.html">About Us</a> | <a href="index.html#home">Home</a>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Announcing AutoNix, a new application for safe driving.">
+    <title>AutoNix</title>
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster&display=swap">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="imgs/Untitled-222.png" alt="AutoNix Logo">
+            <span class="lobster-font">AutoNix</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="aboutUs.html">About Us</a></li>
+            <li><a href="index.html#features">Features</a></li>
+            <li><a href="#feedback">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>ALC (Auto Light Control)</h1>
+            <p>The Auto Light Control Task (ALCTask) dynamically adjusts the PWM signals sent to the left and right side lights based
+            on real-time readings from LDR (Light Dependent Resistor) sensors.
+            Filtered sensor data is read securely using a mutex to ensure thread-safe access across the system.
+            Each LDR value is processed through a calibration function (ProcessLDRValue) to normalize and enhance its accuracy.
+            The resulting brightness levels are applied via hardware PWM channels to maintain balanced lighting.
+            This allows the vehicle to automatically adapt to different lighting conditions, enhancing safety and energy efficiency.
+            The task runs periodically and updates light levels every 200ms, ensuring a responsive behavior in changing
+            environments.
+            It operates independently from driver input, enabling full automation of side lighting.
+            This task contributes to a smarter vehicle system by reducing reliance on manual lighting control.</p>
+        </div>
+        <div class="hero-image">
+            <img src="imgs/autonix-logo.png" alt="Calming brain signals illustration">
+        </div>
+    </section>
+
+    <!-- Flowchart Section -->
+    <section class="features-container" id="features">
+        <div class="features-header">
+            <h2 class="features-heading">Flowchart</h2>
+        </div>
+        <div class="features center-content">
+            <div class="feature">
+                <img src="imgs/alc.png" class="feature-image" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- Hardware Component Section -->
+    <section class="features-container" id="features">
+        <div class="features-header">
+            <h2 class="features-heading">Hardware Component</h2>
+        </div>
+        <div class="features">
+            <div class="feature">
+                <h2>STM</h2>
+                <img src="imgs/stm.jpg" class="feature-img" alt="">
+            </div>
+            <div class="feature">
+                <h2>CAN Transceiver</h2>
+                <img src="imgs/CANtransever.jpg" class="feature-img" alt="">
+            </div>
+            <div class="feature">
+                <h2>LDR</h2>
+                <img src="imgs/ldr.jpg" class="feature-img" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Video Section -->
+    <section class="features-container" id="features">
+        <div class="features-header">
+            <h2 class="features-heading">Demo Video</h2>
+        </div>
+        <div class="features center-content">
+            <div class="feature">
+                <video controls src="vid/try app .mp4" class="feature-image"></video>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feedback Section -->
+    <section class="feedback" id="feedback">
+        <h2>Be the First to Know About AutoNix!</h2>
+        <p>We Value your Insights! Share your Feedback to Help us Enhance Our services and Deliver an Exceptional
+            Experience.</p>
+        <form action="#" method="POST" class="feedback-form">
+            <input type="text" placeholder="Enter your Feedback" required>
+            <button type="submit" class="cta-primary">Send</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 AutoNix. All rights reserved.</p>
+        <a href="index.html#feedback">Contact Us</a> | <a href="aboutUs.html">About Us</a> | <a href="index.html#home">Home</a>
+    </footer>
+</body>
+
+</html>

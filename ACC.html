@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Announcing AutoNix, a new application for safe driving.">
+    <title>AutoNix</title>
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster&display=swap">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="imgs/Untitled-222.png" alt="AutoNix Logo">
+            <span class="lobster-font">AutoNix</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="aboutUs.html">About Us</a></li>
+            <li><a href="index.html#features">Features</a></li>
+            <li><a href="#feedback">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>ACC (Adaptive Cruise Control)</h1>
+            <p>Adaptive Cruise Control (ACC) Task Description
+            The ACCTask is a FreeRTOS task that implements Adaptive Cruise Control (ACC), automatically adjusting the vehicle's
+            speed based on the distance to obstacles detected by an ultrasonic sensor. The system maintains a safe following
+            distance while optimizing speed for smooth operation.
+            
+            Key Functionalities:
+            Sensor Data Acquisition:
+            
+            Safely reads filtered ultrasonic distance from a shared global structure (gFilteredData) using a mutex
+            (xSensorDataMutex).
+            
+            If the mutex is unavailable, the task waits briefly (10ms) before retrying.
+            
+            Speed Control Logic:
+            
+            Obstacle Too Close (ultrasonic ≤ min_distance):
+            
+            Full stop (speed = 0) to prevent collision.
+            
+            Obstacle Within Adjustable Range (min_distance < ultrasonic < default_distance): Dynamically reduces speed based on
+                distance (speed=max_speed - 2 × (default_distance - ultrasonic)). Ensures smooth deceleration as the vehicle
+                approaches an obstacle. No Obstacle Detected (ultrasonic ≥ default_distance): Maintains maximum speed
+                (speed=max_speed) for optimal travel.</p>
+        </div>
+        <div class="hero-image">
+            <img src="imgs/autonix-logo.png" alt="Calming brain signals illustration">
+        </div>
+    </section>
+
+    <!-- Flowchart Section -->
+    <section class="features-container" id="features">
+        <div class="features-header">
+            <h2 class="features-heading">Flowchart</h2>
+        </div>
+        <div class="features center-content">
+            <div class="feature">
+                <img src="imgs/acc.png" class="feature-image flowchart-img" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- Hardware Component Section -->
+    <section class="features-container" id="features">
+        <div class="features-header">
+            <h2 class="features-heading">Hardware Component</h2>
+        </div>
+        <div class="features">
+            <div class="feature">
+                <h2>STM</h2>
+                <img src="imgs/stm.jpg" class="feature-img" alt="">
+            </div>
+            <div class="feature">
+                <h2>CAN Transceiver</h2>
+                <img src="imgs/CANtransever.jpg" class="feature-img" alt="">
+            </div>
+            <div class="feature">
+                <h2>Ultrasonic sensor</h2>
+                <img src="imgs/ultrasonic.jpg" class="feature-img" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Video Section -->
+    <section class="features-container" id="features">
+        <div class="features-header">
+            <h2 class="features-heading">Demo Video</h2>
+        </div>
+        <div class="features center-content">
+            <div class="feature">
+                <video controls src="vid/try app .mp4" class="feature-image"></video>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feedback Section -->
+    <section class="feedback" id="feedback">
+        <h2>Be the First to Know About AutoNix!</h2>
+        <p>We Value your Insights! Share your Feedback to Help us Enhance Our services and Deliver an Exceptional
+            Experience.</p>
+        <form action="#" method="POST" class="feedback-form">
+            <input type="text" placeholder="Enter your Feedback" required>
+            <button type="submit" class="cta-primary">Send</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 AutoNix. All rights reserved.</p>
+        <a href="index.html#feedback">Contact Us</a> | <a href="aboutUs.html">About Us</a> | <a href="index.html#home">Home</a>
+    </footer>
+</body>
+
+</html>

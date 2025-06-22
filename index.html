@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Announcing AutoNix, a new application for safe driving.">
     <title>AutoNix</title>
-    <link rel="stylesheet" href="css/master.css">
+    <meta name="description" content="Announcing AutoNix, a new application for safe driving.">
+    <link rel="stylesheet" href="css/master.css"> <!-- رابط ملف CSS الخارجي -->
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster&display=swap">
@@ -19,6 +19,7 @@
             <img src="imgs/Untitled-222.png" alt="AutoNix Logo">
             <span class="lobster-font">AutoNix</span>
         </div>
+        <div class="menu-toggle" id="menu-toggle">&#9776;</div>
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="aboutUs.html">About Us</a></li>
@@ -35,15 +36,13 @@
                 (FOTA) technology for continuous updates. The system enhances vehicle safety with features like Adaptive
                 Cruise Control (ACC), Automatic Emergency Braking (AEB), and Lane Keeping System (LKS). It also
                 integrates real-time GPS tracking and route optimization for improved navigation. The goal is to create
-                a flexible, adaptive, and future-proof solution for safer and more convenient driving.</p>
+                a flexible, adaptive, and future-proof solution for safer and more convenient driving.</p>
             <p class="hero-slogan"><strong>With AutoNix You Are Safe!</strong></p>
         </div>
         <div class="hero-image">
-            <img src="imgs/autonix-logo.png" alt="Calming brain signals illustration">
+            <img src="imgs/autonix-logo.png" alt="AutoNix Illustration">
         </div>
     </section>
-
-
 
     <!-- Features Section -->
     <section class="features-container" id="features">
@@ -53,27 +52,16 @@
                 smarter and safer driving experience.</p>
         </div>
         <div class="features">
-            <div class="feature">
-                <a href="FOTA.html">FOTA</a>
-            </div>
-            <div class="feature">
-                <a href="ALC.html">ALC</a>
-            </div>
-            <div class="feature">
-                <a href="ALKS.html">LKS</a>
-            </div>
-            <div class="feature">
-                <a href="ACC.html">ACC</a>            
-            </div>
-            <div class="feature">
-                <a href="AEB.html">AEB</a>
-            </div>
-            <div class="feature">
-                <a href="wi-fi.html">Wi-Fi Control</a>
-            </div>
+            <div class="feature"><a href="FOTA.html">FOTA</a></div>
+            <div class="feature"><a href="ALC.html">ALC</a></div>
+            <div class="feature"><a href="ALKS.html">LKS</a></div>
+            <div class="feature"><a href="ACC.html">ACC</a></div>
+            <div class="feature"><a href="AEB.html">AEB</a></div>
+            <div class="feature"><a href="wi-fi.html">Wi-Fi Control</a></div>
         </div>
     </section>
 
+    <!-- Feedback Section -->
     <section class="feedback" id="feedback">
         <h2>Be the First to Know About AutoNix!</h2>
         <p>We Value your Insights! Share your Feedback to Help us Enhance Our services and Deliver an Exceptional
@@ -84,12 +72,20 @@
         </form>
     </section>
 
-
     <!-- Footer -->
     <footer class="footer">
         <p>&copy; 2025 AutoNix. All rights reserved.</p>
         <a href="#feedback">Contact Us</a> | <a href="aboutUs.html">About Us</a> | <a href="#home">Home</a>
     </footer>
+
+    <!-- JavaScript for Hamburger Menu -->
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
 </body>
 
 </html>

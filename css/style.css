@@ -1,3 +1,4 @@
+/* General Styles */
 * {
     margin: 0;
     padding: 0;
@@ -32,6 +33,7 @@ html {
     align-items: center;
     padding: 1rem 2rem;
     background-color: var(--primary-color);
+    position: relative;
 }
 
 .navbar .logo {
@@ -85,6 +87,14 @@ html {
 
 .nav-links a:hover {
     color: var(--accent-color);
+}
+
+/* Hamburger Menu Button */
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
 }
 
 /* About Us Section */
@@ -180,12 +190,11 @@ html {
     color: var(--text-light);
 }
 
-
 /* Divider Style */
 .divider {
     width: 80%;
     height: 2px;
-    background-color: var(--primary-purple);
+    background-color: var(--primary-color);
     margin: 2rem auto;
     border-radius: 1px;
 }
@@ -216,23 +225,11 @@ html {
         padding: 30px;
     }
 
-    .nav-links {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        margin-top: 1rem;
-    }
-
-    .nav-links li {
-        margin: 0.5rem 0;
-    }
-
     .hero {
         min-height: 100vh;
         flex-direction: column;
         padding: 2rem 1rem;
         gap: 3rem;
-        /* Reduced gap for mobile */
     }
 
     .hero-content {
@@ -246,5 +243,35 @@ html {
 
     .features {
         grid-template-columns: 1fr;
+    }
+
+    /* Hamburger Styles */
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 2rem;
+        z-index: 1001;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: var(--primary-color);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 0.5rem 0;
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 1rem 1rem;
     }
 }

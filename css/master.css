@@ -90,11 +90,9 @@ html {
     align-items: center;
     justify-content: center;
     padding: 2rem 4rem;
-    /* Increased padding for more height */
     background-color: #f0f4f8;
     gap: 4rem;
     min-height: 95vh;
-    /* This makes the hero take up the full viewport height */
 }
 
 .hero-content {
@@ -115,25 +113,17 @@ html {
 
 .hero-slogan {
     font-size: 1.4rem;
-    /* Larger font size for emphasis */
     color: var(--primary-blue-gray);
-    /* Matches the primary color */
     font-weight: bold;
-    /* Bold text */
     margin-top: 1.5rem;
 }
 
 .hero-image {
     flex: 1;
-    /* Changed to flex: 1 */
     display: flex;
-    /* Added to help with centering */
     justify-content: center;
-    /* Center the image */
     max-width: 500px;
-    /* Constrain the container */
 }
-
 
 .hero-image img {
     width: 100%;
@@ -156,7 +146,6 @@ html {
     }
 }
 
-
 /* Divider Style */
 .divider {
     width: 80%;
@@ -165,7 +154,6 @@ html {
     margin: 2rem auto;
     border-radius: 1px;
 }
-
 
 /* Features Section Heading */
 .features-container {
@@ -189,7 +177,7 @@ html {
     color: #555;
 }
 
-/* Features Section (Updated) */
+/* Features Section */
 .features {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -209,16 +197,12 @@ html {
 
 .feature:hover {
     transform: translateY(-3px);
-    /* Slight lift on hover */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    /* Hover shadow */
 }
 
 .feature:active {
     transform: translateY(1px);
-    /* Slight press down on click */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    /* Active shadow */
 }
 
 .feature a {
@@ -229,22 +213,27 @@ html {
     text-align: center;
     margin-top: 0.5rem;
 }
+
 .feature-image {
-    width: 1000px;
-    height: 500px;
+    width: 100%;
+    max-width: 900px;
+    height: auto;
     object-fit: contain;
     margin: 0 auto;
 }
+
 .flowchart-img {
     width: 60%;
     max-width: 900px;
     height: auto;
 }
+
 .feature-img {
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
+
 .center-content {
     display: flex;
     justify-content: center;
@@ -255,7 +244,6 @@ html {
 .feature p {
     color: #555;
 }
-
 
 /* Footer */
 .footer {
@@ -270,7 +258,6 @@ html {
     text-decoration: none;
     margin: 0 0.5rem;
 }
-
 
 /* Feedback Section */
 .feedback {
@@ -346,7 +333,6 @@ html {
         flex-direction: column;
         padding: 2rem 1rem;
         gap: 3rem;
-        /* Reduced gap for mobile */
     }
 
     .hero-content {
@@ -361,20 +347,28 @@ html {
     .features {
         grid-template-columns: 1fr;
     }
-        .feedback-form {
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-        }
-    
-        .feedback-form input[type="text"] {
-            width: 90%;
-            max-width: 400px;
-        }
-    
-        .feedback-form .cta-primary {
-            width: 90%;
-            max-width: 200px;
-            margin-top: 0.8rem;
-        }
+
+    .feedback-form {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .feedback-form input[type="text"] {
+        width: 90%;
+        max-width: 400px;
+    }
+
+    .feedback-form .cta-primary {
+        width: 90%;
+        max-width: 200px;
+        margin-top: 0.8rem;
+    }
+
+    /* ✅ الفيديو في وضع الموبايل */
+    video.feature-image {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
 }

@@ -64,7 +64,8 @@
             <img src="imgs/Untitled-222.png" alt="AutoNix Logo" />
             <span class="lobster-font">AutoNix</span>
         </div>
-        <ul class="nav-links">
+        <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+        <ul class="nav-links" id="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="AboutUs.html">About Us</a></li>
             <li><a href="index.html#features">Features</a></li>
@@ -197,6 +198,16 @@
         <p>&copy; 2025 AutoNix. All rights reserved.</p>
         <a href="index.html#feedback">Contact Us</a> | <a href="aboutUs.html">About Us</a> | <a href="index.html#home">Home</a>
     </footer>
+
+    <!-- JavaScript for Hamburger Menu -->
+    <script>
+        const menuToggle = document.getElementById("menu-toggle");
+        const navLinks = document.getElementById("nav-links");
+
+        menuToggle.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
+    </script>
 </body>
 
 </html>

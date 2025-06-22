@@ -319,9 +319,7 @@ html {
 @media (max-width: 768px) {
     .nav-links {
         flex-direction: column;
-        align-items: center;
         width: 100%;
-        margin-top: 1rem;
     }
 
     .nav-links li {
@@ -365,10 +363,47 @@ html {
         margin-top: 0.8rem;
     }
 
-    /* ✅ الفيديو في وضع الموبايل */
     video.feature-image {
         width: 100%;
         max-width: 100%;
         height: auto;
+    }
+}
+/* Hamburger Menu - Mobile Style */
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* Responsive navbar */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 2rem;
+        z-index: 1001;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: var(--primary-blue-gray);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 1rem 0;
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 1rem 1rem;
     }
 }

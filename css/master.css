@@ -128,7 +128,7 @@ html {
 .hero-image img {
     width: 100%;
     max-width: 400px;
-    min-width: 415px;
+    min-width: 394px;
     height: auto;
     object-fit: contain;
     animation: slidein 2s ease-out;
